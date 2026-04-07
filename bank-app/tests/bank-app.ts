@@ -1,6 +1,6 @@
 import * as anchor from "@coral-xyz/anchor";
 import { Program } from "@coral-xyz/anchor";
-import { BankApp } from "../target/types/bank_app";
+import type { BankApp } from "../target/types/bank_app";
 import { PublicKey, SystemProgram, TransactionInstruction } from "@solana/web3.js";
 import { BN } from "bn.js";
 import { 
