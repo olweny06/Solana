@@ -22,5 +22,5 @@ anchor-debug = []
 [dependencies]
 anchor-lang = { version = "0.31.1", features = ["init-if-needed"] }
 anchor-spl = { version = "0.31.1", features = ["token", "token_2022"] }
-staking-app = {  path = "../staking-app", features = ["cpi"] }
 token-taking-app = { path = "../../../token-staking-app/programs/token-taking-app", features = ["cpi"] }
+staking-app-cpi = { path = "../../../staking-app-cpi", features = ["cpi"]}

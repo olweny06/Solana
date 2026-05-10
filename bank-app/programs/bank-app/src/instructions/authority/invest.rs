@@ -5,7 +5,7 @@ use crate::{
     error::BankAppError,
     state::BankInfo,
 };
-use staking_app::{cpi, program::StakingApp};
+use staking_app_cpi::{cpi, program::StakingApp};
 
 #[derive(Accounts)]
 pub struct Invest<'info> {

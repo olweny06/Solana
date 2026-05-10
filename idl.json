@@ -1,0 +1,135 @@
+{
+  "address": "VHPvY2nUaF8PwoK9tN2MzjUuf29Sh6KjMpH6AniZY5g",
+  "metadata": {
+    "name": "staking_app",
+    "version": "0.1.0",
+    "spec": "0.1.0",
+    "description": "Created with Anchor"
+  },
+  "instructions": [
+    {
+      "name": "stake",
+      "discriminator": [
+        206,
+        176,
+        202,
+        18,
+        200,
+        209,
+        179,
+        108
+      ],
+      "accounts": [
+        {
+          "name": "staking_vault",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  83,
+                  84,
+                  65,
+                  75,
+                  73,
+                  78,
+                  71,
+                  95,
+                  86,
+                  65,
+                  85,
+                  76,
+                  84
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "user_info",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  85,
+                  83,
+                  69,
+                  82,
+                  95,
+                  73,
+                  78,
+                  70,
+                  79
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "user"
+              }
+            ]
+          }
+        },
+        {
+          "name": "user",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "payer",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "amount",
+          "type": "u64"
+        },
+        {
+          "name": "is_stake",
+          "type": "bool"
+        }
+      ]
+    }
+  ],
+  "accounts": [
+    {
+      "name": "UserInfo",
+      "discriminator": [
+        83,
+        134,
+        200,
+        56,
+        144,
+        56,
+        10,
+        62
+      ]
+    }
+  ],
+  "types": [
+    {
+      "name": "UserInfo",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "amount",
+            "type": "u64"
+          },
+          {
+            "name": "last_update_time",
+            "type": "u64"
+          }
+        ]
+      }
+    }
+  ]
+}
